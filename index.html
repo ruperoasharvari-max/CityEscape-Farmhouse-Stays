@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- TODO: Paste GTM HEAD snippet (head) here later -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CityEscape Farmhouse Stays | Weekend Farmhouse Booking near Hyderabad</title>
+  <style>
+    :root {
+      --bg: #f6f7f2;
+      --bg-card: #ffffff;
+      --border: #d9e0cf;
+      --accent: #e07a5f;
+      --accent-soft: #f4a261;
+      --accent-green: #2f855a;
+      --ink: #1a202c;
+      --muted: #4a5568;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #ffffff 0, #f6f7f2 55%, #edf1e4 100%);
+      color: var(--ink);
+    }
+
+    header {
+      height: 56px;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(217,224,207,0.9);
+      backdrop-filter: blur(12px);
+      background: rgba(246,247,242,0.92);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .logo {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 0.1rem;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .logo span {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    nav a {
+      text-decoration: none;
+      margin-left: 1.2rem;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      padding: 0.35rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+    }
+
+    nav a:hover {
+      color: var(--ink);
+      border-color: rgba(204,211,193,0.9);
+      background: rgba(255,255,255,0.95);
+    }
+
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 2.8rem 1.6rem 3.2rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+      gap: 2.4rem;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--accent-green);
+      margin-bottom: 0.8rem;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      line-height: 1.18;
+      margin: 0 0 0.8rem;
+    }
+
+    .hero-sub {
+      font-size: 0.98rem;
+      color: var(--muted);
+      max-width: 500px;
+      margin-bottom: 1.6rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .btn {
+      border-radius: 999px;
+      border: none;
+      padding: 0.78rem 1.6rem;
+      font-size: 0.86rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: transform 0.12s ease, box-shadow 0.12s ease,
+        background 0.12s ease, border-color 0.12s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+      color: #ffffff;
+      box-shadow: 0 9px 22px rgba(224,122,95,0.55);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 13px 30px rgba(224,122,95,0.7);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid rgba(204,211,193,0.9);
+      color: var(--ink);
+    }
+
+    .btn-outline:hover {
+      background: #ffffff;
+    }
+
+    .hero-card {
+      background: linear-gradient(145deg, #ffffff, #f1efe8);
+      border-radius: 24px;
+      padding: 1.7rem 1.5rem;
+      border: 1px solid var(--border);
+      box-shadow: 0 16px 38px rgba(148,148,120,0.28);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-farm {
+      margin: 0 auto 1.1rem;
+      width: 100%;
+      max-width: 340px;
+      height: 190px;
+      border-radius: 18px;
+      border: 1px solid rgba(214,202,180,0.9);
+      background: linear-gradient(180deg, #f6e6d1 0, #f4c9a5 40%, #6b8f5e 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-pool {
+      position: absolute;
+      bottom: 8%;
+      right: 8%;
+      width: 40%;
+      height: 26%;
+      border-radius: 18px;
+      background: radial-gradient(circle at 10% 0, #e0fbff 0, #4ea8de 70%);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    }
+
+    .hero-house {
+      position: absolute;
+      bottom: 18%;
+      left: 10%;
+      width: 42%;
+      height: 40%;
+      border-radius: 10px;
+      background: linear-gradient(180deg, #fefefe 0, #f4f1ec 60%, #e2d4c4 100%);
+      box-shadow: 0 7px 18px rgba(0,0,0,0.25);
+    }
+
+    .hero-sun {
+      position: absolute;
+      top: 12%;
+      right: 16%;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #ffe8a3 0, #f4a261 55%, #f4a261 100%);
+    }
+
+    .hero-note {
+      font-size: 0.84rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .hero-pill {
+      position: absolute;
+      top: 1.1rem;
+      right: 1.4rem;
+      padding: 0.26rem 0.85rem;
+      border-radius: 999px;
+      background: rgba(250,255,250,0.9);
+      border: 1px solid rgba(214,200,180,0.9);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--accent);
+    }
+
+    .section {
+      margin-top: 3.3rem;
+    }
+
+    .section h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section p {
+      font-size: 0.94rem;
+      color: var(--muted);
+      max-width: 640px;
+      margin-bottom: 1.7rem;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .feature-card {
+      background: var(--bg-card);
+      border-radius: 16px;
+      padding: 1.1rem 1rem;
+      border: 1px solid rgba(217,224,207,0.9);
+      font-size: 0.9rem;
+      box-shadow: 0 9px 20px rgba(189,189,150,0.22);
+    }
+
+    .feature-title {
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    footer {
+      border-top: 1px solid rgba(217,224,207,0.9);
+      background: #faf9f3;
+      padding: 1.2rem 1.6rem;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 840px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      header {
+        padding: 0 1.3rem;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+      nav a {
+        margin-left: 0.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- TODO: Paste GTM BODY snippet (noscript) here later -->
+
+  <header>
+    <div class="logo">
+      CityEscape
+      <span>FARMHOUSE STAYS · HYDERABAD</span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="farms.html">Farmhouses</a>
+      <a href="booking.html">Booking</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="hero-kicker">Weekend getaways · Private pools · Near Hyderabad</div>
+        <h1>Book a private farmhouse escape for your next weekend.</h1>
+        <p class="hero-sub">
+          CityEscape Farmhouse Stays is a demo booking site for cozy farmhouses
+          around Hyderabad—perfect for groups from the city planning a day-out
+          or overnight stay, and perfect for practicing GA4 & GTM tracking.
+        </p>
+        <div class="hero-cta">
+          <button class="btn btn-primary" onclick="location.href='farms.html'">
+            View farmhouses
+          </button>
+          <button class="btn btn-outline" onclick="location.href='booking.html'">
+            Quick booking (demo)
+          </button>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <div class="hero-pill">Weekend farmhouse · Demo</div>
+        <div class="hero-farm">
+          <div class="hero-house"></div>
+          <div class="hero-pool"></div>
+          <div class="hero-sun"></div>
+        </div>
+        <p class="hero-note">
+          This is a practice site: no real bookings or payments. Use it to
+          design and test your analytics and conversion setup.
+        </p>
+      </aside>
+    </section>
+
+    <section class="section">
+      <h2>Hyderabad crowd, farmhouse mood.</h2>
+      <p>
+        Most guests drive in from busy areas like Gachibowli, Kondapur or
+        Hitech City and spend a relaxed day with friends or family. The layout
+        of this site keeps that simple journey clear: browse, select, book,
+        confirm.
+      </p>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-title">Curated demo farmhouses</div>
+          <div>
+            Sample properties around Moinabad, Shankarpally and Shamirpet, with
+            private pools and lawns (demo data only).
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-title">Perfect for weekend plans</div>
+          <div>
+            Simple cards and clear CTAs that match how real users browse and
+            pick a farmhouse for the weekend.
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-title">Analytics-friendly journey</div>
+          <div>
+            Home → Farmhouses → Booking form → Thank-you page—ideal for GA4,
+            Google Ads and cross-domain cookie tests.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> CityEscape Farmhouse Stays · Demo project only.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
